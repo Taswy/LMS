@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>图书馆管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="./easyui/demo.css">
+	<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="./js/mylib.js"></script>
+</head>
+
+<body  style="font-family:微软雅黑;background-image:url('img/background.jpg')">
+<div style="color: #DDDDDD; margin: 30px 50px 10px 150px;">
+<h2 >图书馆管理系统</h2>
+</div>
+<div style="color: #CCFFFF; margin: 0px 0px 10px 200px;">
+<p>Taswy -- You can do anything you set your mind to</p>
+</div>
+<div  class="easyui-layout"  style="width:1100px;height:500px;margin: 50px 50px 0px 50px;" >
+		<div data-options="region:'south',split:true" style="height:50px;"></div>
+
+		<!-- 左侧导航 -->
+		<div data-options="region:'west',split:true" title="导航菜单" style="width:200px;">
+			<div class="easyui-accordion" >
+
+				<div id='mylib' title="我的图书馆" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+					<h3  id='readerin' onclick="addTab('读者登录','http://www.baidu.com')" href='' style="color:#0099FF;margin:0px 0px 10px 60px;">读者登录</h3>
+					<h3 id='mybrw' onclick="addTab('我的借阅','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">我的借阅</h3>
+					<h3 id='iwanab' onclick="addTab('我要借书','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">我要借书</h3>
+					<h3 id='myinfo' onclick="addTab('我的信息','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">我的信息</h3>
+				</div>
+				<div title="用户信息管理" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+					<h3 id='creader' onclick="addTab('添加读者','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">添加读者</h3>
+					<h3 id='inforeader' onclick="addTab('读者信息','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">读者信息</h3>
+					<h3 id='cmanager' onclick="addTab('添加管理员','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">添加管理员</h3>
+					<h3 id='infomanager' onclick="addTab('管理员信息','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">管理员信息</h3>
+				</div>
+				<div title="图书管理" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+					<h3 id='cate' onclick="addTab('分类管理','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">分类管理</h3>
+					<h3 id='book' onclick="addTab('图书管理','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">图书管理</h3>
+					<h3 id='借阅清单' onclick="addTab('借阅清单','http://www.google.com')" style="color:#0099FF;margin:0px 0px 10px 60px;">借阅清单</h3>
+				</div>
+				<div title="关于" data-options="iconCls:'icon-ok'"  style="overflow:auto;padding:10px;">
+					<h3  id='about' onclick="addTab('关于','pages/about/about.html')" style="color:#0099FF;margin:0px 0px 10px 60px;">关于</h3>
+				</div>
+			</div>
+		</div>
+
+		<!-- 内容tabs -->
+		<div  data-options="region:'center',title:'功能',iconCls:'icon-ok'">
+			<div id='menu' class="easyui-tabs" style="width:890px;height:400px">
+				
+				<div title="关于"  data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+					<div style="margin:50px 100px 0px 100px;">
+					<h3  style="color:#0033FF;">《图书管理系统》实现图书管理和借阅的信息化，对图书信息和用户（读者，借阅者等）信息进行有效的管理。它主要用于工作人员对读者信息和图书信息进行管理，并提供对图书的查询、借阅、归还等功能。同时让学生可以通过网络浏览、查询图书信息等。</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

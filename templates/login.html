@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+    <script type="text/javascript" src="js/placeholder.js"></script>
+    <title>管理员登录</title>
+</head>
+ 
+<body>
+
+    <form id="login">
+        <label for="username">username</label>
+        <input id="txtUserName" type="text" name="username" class="placeholder" onblur="checkUserName()" onclick="$.trim(this.value)" placeholder="编号">
+        <span></span>
+        <label for="password">password</label>
+        <input id="txtUserPwd" type="password" name="password" class="placeholder" onblur="checkUserPwd()" onclick="$.trim(this.value)" placeholder="密码">
+         <span></span>
+        <input id="checkit" type="submit" value="登入">
+    </form>
+</body>
+     
+</html>
